@@ -1,14 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import {Tilt}  from "react-tilt";
+import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../style";
-import { services } from "../constans";
+import { styles } from "../styles";
+import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
