@@ -34,8 +34,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_a5zwneh',
-        'template_a67uqwt',
+        import.meta.env.service_a5zwneh,
+        import.meta.env.template_a67uqwt,
         {
           from_name: form.name,
           to_name: "Hisu",
@@ -43,7 +43,7 @@ const Contact = () => {
           to_email: "hisu0807outlook.com",
           message: form.message,
         },
-        'Q3Y5oCrKZPKK1H6CR'
+        import.meta.env.eEXX3bCYsDjpZyLgF
       )
       .then(
         () => {
