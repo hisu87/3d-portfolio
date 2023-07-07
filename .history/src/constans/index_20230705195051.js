@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import {
     mobile,
     backend,
@@ -24,11 +23,6 @@ import {
     jobit,
     tripguide,
     threejs,
-    springboot,
-    webdev,
-    spotify,
-    java,
-    portfolio
   } from "../assets";
   
   export const navLinks = [
@@ -48,11 +42,11 @@ import {
   
   const services = [
     {
-      title: "Java Developer",
+      title: "Web Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Java Developer",
       icon: mobile,
     },
     {
@@ -60,7 +54,7 @@ import {
       icon: backend,
     },
     {
-      title: "Database",
+      title: "",
       icon: creator,
     },
   ];
@@ -87,12 +81,20 @@ import {
       icon: reactjs,
     },
     {
+      name: "Redux Toolkit",
+      icon: redux,
+    },
+    {
       name: "Tailwind CSS",
       icon: tailwind,
     },
     {
       name: "Node JS",
       icon: nodejs,
+    },
+    {
+      name: "MongoDB",
+      icon: mongodb,
     },
     {
       name: "Three JS",
@@ -114,24 +116,50 @@ import {
   
   const experiences = [
     {
-      title: "Software Development With Java",
-      company_name: "Studying at FPT PolyTechic",
-      icon: springboot,
+      title: "React.js Developer",
+      company_name: "Starbucks",
+      icon: starbucks,
       iconBg: "#383E56",
-      date: "From August 2022",
+      date: "March 2020 - April 2021",
       points: [
-        "Software architecture and design skills.",
-         "Basic Java Programming Skills.",
-         "Teamwork skill.",
-         "etc..."
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
     {
-      title: "Web Developer With ReactJS and Other Technologies",
-      company_name: "Self Study",
-      icon: webdev,
+      title: "React Native Developer",
+      company_name: "Tesla",
+      icon: tesla,
+      iconBg: "#E6DEDD",
+      date: "Jan 2021 - Feb 2022",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "Web Developer",
+      company_name: "Shopify",
+      icon: shopify,
       iconBg: "#383E56",
-      date: "From August 2022",
+      date: "Jan 2022 - Jan 2023",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "Full stack Developer",
+      company_name: "Meta",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "Jan 2023 - Present",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -170,16 +198,16 @@ import {
   
   const projects = [
     {
-      name: "3D Portfolio",
+      name: "Car Rent",
       description:
-        "A 3D portfolio website that showcases my skills and projects using Three.js and React.",
+        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "threejs",
+          name: "mongodb",
           color: "green-text-gradient",
         },
         {
@@ -187,16 +215,37 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: portfolio,
-      source_code_link: "https://github.com/hisu87/3d-portfolio.git",
+      image: carrent,
+      source_code_link: "https://github.com/",
     },
     {
-      name: "Spotify Clone",
+      name: "Job IT",
       description:
-        "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data, and stripe for subsciption.",
+        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
       tags: [
         {
           name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "restapi",
+          color: "green-text-gradient",
+        },
+        {
+          name: "scss",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: jobit,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Trip Guide",
+      description:
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      tags: [
+        {
+          name: "nextjs",
           color: "blue-text-gradient",
         },
         {
@@ -204,25 +253,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "stripe",
+          name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: spotify,
-      source_code_link: "https://github.com/hisu87/spotify-clone.git",
-    },
-    {
-      name: "Java",
-      description:
-        "A Simpkle Student Management System using Java can read and write data to file.",
-      tags: [
-        {
-          name: "java",
-          color: "blue-text-gradient",
-        },
-      ],
-      image: java,
-      source_code_link: "https://github.com/hisu87/PS33100-PhamVanHieu-Assignment-Java2",
+      image: tripguide,
+      source_code_link: "https://github.com/",
     },
   ];
   

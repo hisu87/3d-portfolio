@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -25,10 +27,16 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import springboot from "./company/springboot.png";
+import webdev from "./company/webdev.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import spotify from "./spotifyclone.png";
+import java from "./fresherjava.png";
+import portfolio from "./3dportfolio.png";
+
 
 export {
   logo,
@@ -59,4 +67,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  springboot,
+  webdev,
+  spotify,
+  java,
+  portfolio
 };
