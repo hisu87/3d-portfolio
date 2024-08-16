@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import logo from "./logo.svg";
+import logo1 from "./logo1.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -43,6 +44,7 @@ import store from "./store.png";
 
 export {
   logo,
+  logo1,
   backend,
   creator,
   mobile,
