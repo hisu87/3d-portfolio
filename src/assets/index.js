@@ -36,6 +36,9 @@ import tripguide from "./tripguide.png";
 import spotify from "./spotifyclone.png";
 import java from "./fresherjava.png";
 import portfolio from "./3dportfolio.png";
+import perfume from "./perfume.png";
+import stabuckclone from "./sb.png";
+import store from "./store.png";
 
 
 export {
@@ -71,5 +74,8 @@ export {
   webdev,
   spotify,
   java,
-  portfolio
+  portfolio,
+  perfume,
+  stabuckclone,
+  store,
 };

@@ -28,7 +28,10 @@ import {
   webdev,
   spotify,
   java,
-  portfolio
+  portfolio,
+  perfume,
+  store,
+  stabuckclone
 } from "../assets";
 
 export const navLinks = [
@@ -245,7 +248,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: java,
+    image: perfume,
     source_code_link: "https://github.com/hisu87/webTMDT",
   },
   {
@@ -269,9 +272,32 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: java,
+    image: store,
     source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
   },
+  {
+    name: "Starbucks Clone Remake",
+    description:
+      "A Starbucks clone with different UI/UX and more creative. By using HTML, CSS and JavaScript. For a new experience.",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      }, {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      }
+
+    ],
+    image: stabuckclone,
+    source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
+  },
+
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
