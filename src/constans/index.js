@@ -35,6 +35,8 @@ import {
   perfumeproject,
   storeproject,
   sb,
+  linkhub87,
+  project2041,
 } from "../assets";
 
 export const navLinks = [
@@ -74,14 +76,6 @@ const services = [
 const technologies = [
   // Front-end
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -93,10 +87,7 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux",
-    icon: redux,
-  },
+
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -115,10 +106,7 @@ const technologies = [
     name: "Java",
     icon: java,
   },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+
   {
     name: "Spring Boot",
     icon: springboot,
@@ -129,18 +117,12 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
-  {
-    name: "Git",
-    icon: git,
-  },
+
   {
     name: "GitHub",
     icon: github,
   },
-  {
-    name: "Figma",
-    icon: figma,
-  },
+
   {
     name: "Docker",
     icon: docker,
@@ -244,7 +226,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: "", // Cần thay thế bằng biến hình ảnh của bạn
+    image: linkhub87,
     source_code_link: "https://github.com/hisu87/linkhub87",
   },
   {
@@ -290,27 +272,21 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: "perfumeproject", // Cần thay thế bằng biến hình ảnh của bạn
+    image: perfumeproject,
     source_code_link: "https://github.com/hisu87/webTMDT",
   },
-  {
-    name: "Project1",
-    description:
-      "Không tìm thấy mô tả chi tiết cho dự án này. Bạn nên cập nhật mô tả.",
-    tags: [],
-    image: "your_image_variable_for_project1", // Cần thay thế bằng biến hình ảnh của bạn
-    source_code_link: "https://github.com/hisu87/Project1",
-  },
+
   {
     name: "SOF2041",
-    description: "Dự án mẫu môn SOF2041 9/2023.",
+    description:
+      " Đây là một dự án ứng dụng desktop được xây dựng bằng Java Swing, SQL Server, thể hiện các kỹ năng và kiến thức cốt lõi của môn học.",
     tags: [
       {
         name: "java",
         color: "blue-text-gradient",
       },
     ],
-    image: "your_image_variable_for_sof2041", // Cần thay thế bằng biến hình ảnh của bạn
+    image: project2041, // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/SOF2041",
   },
   {
@@ -331,7 +307,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "spotifyclone", // Cần thay thế bằng biến hình ảnh của bạn
+    image: spotifyclone,
     source_code_link: "https://github.com/hisu87/spotify-clone",
   },
   {
@@ -352,7 +328,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: "sb", // Cần thay thế bằng biến hình ảnh của bạn
+    image: sb,
     source_code_link: "https://github.com/hisu87/Web-Starbuck-Clone-Remake",
   },
   {

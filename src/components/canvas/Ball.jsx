@@ -41,30 +41,38 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  const glRef = React.useRef(null);
+  const glContextRef = React.useRef(null);
 
   React.useEffect(() => {
+    const glContext = glContextRef.current;
     return () => {
-      const gl = glRef.current;
-      if (gl) {
-        try {
-          gl.dispose();
-          gl.forceContextLoss();
-          const ext = gl.getContext().getExtension("WEBGL_lose_context");
-          if (ext && typeof ext.loseContext === "function") ext.loseContext();
-        } catch (e) {
-          console.warn("Error disposing GL context:", e);
+      try {
+        // Force context loss immediately on unmount
+        if (glContext) {
+          const ext = glContext.getExtension("WEBGL_lose_context");
+          if (ext) {
+            ext.loseContext();
+          }
         }
+      } catch (e) {
+        // ignore errors during cleanup
       }
     };
   }, []);
 
   return (
     <Canvas
-      frameloop="demand"
-      dpr={[1, 2]}
-      onCreated={({ gl }) => (glRef.current = gl)}
-      gl={{ alpha: true, antialias: true, maxPixelRatio: 1 }}>
+      frameloop="always"
+      dpr={[1, 1.5]}
+      onCreated={({ gl }) => {
+        glContextRef.current = gl.getContext();
+      }}
+      gl={{
+        alpha: true,
+        antialias: true,
+        maxPixelRatio: 1,
+        stencil: false,
+      }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />

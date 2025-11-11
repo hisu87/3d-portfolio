@@ -58,29 +58,34 @@ const ComputersCanvas = () => {
   }, []);
 
   React.useEffect(() => {
+    const glContext = glRef.current;
     return () => {
-      const gl = glRef.current;
-      if (gl) {
-        try {
-          gl.dispose();
-          gl.forceContextLoss();
-          const ext = gl.getContext().getExtension("WEBGL_lose_context");
-          if (ext && typeof ext.loseContext === "function") ext.loseContext();
-        } catch (e) {
-          console.warn("Error disposing GL context:", e);
+      try {
+        if (glContext) {
+          const ext = glContext.getExtension("WEBGL_lose_context");
+          if (ext) ext.loseContext();
         }
+      } catch (e) {
+        // ignore
       }
     };
   }, []);
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       shadows
-      dpr={[1, 2]}
-      onCreated={({ gl }) => (glRef.current = gl)}
+      dpr={[1, 1.5]}
+      onCreated={({ gl }) => {
+        glRef.current = gl.getContext();
+      }}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ alpha: true, antialias: true, maxPixelRatio: 1 }}>
+      gl={{
+        alpha: true,
+        antialias: true,
+        maxPixelRatio: 1,
+        stencil: false,
+      }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}

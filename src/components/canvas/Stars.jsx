@@ -33,31 +33,38 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
-  const glRef = useRef(null);
+  const glContextRef = useRef(null);
 
   useEffect(() => {
+    const glContext = glContextRef.current;
     return () => {
-      const gl = glRef.current;
-      if (gl) {
-        try {
-          gl.dispose();
-          gl.forceContextLoss();
-          const ext = gl.getContext().getExtension("WEBGL_lose_context");
-          if (ext && typeof ext.loseContext === "function") ext.loseContext();
-        } catch (e) {
-          console.warn("Error disposing GL context:", e);
+      try {
+        if (glContext) {
+          const ext = glContext.getExtension("WEBGL_lose_context");
+          if (ext) ext.loseContext();
         }
+      } catch (e) {
+        // ignore
       }
     };
   }, []);
 
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
+    <div className="w-full h-screen absolute inset-0 -z-10">
       <Canvas
-        frameloop="demand"
+        frameloop="always"
+        dpr={[1, 1.5]}
         camera={{ position: [0, 0, 1] }}
-        onCreated={({ gl }) => (glRef.current = gl)}
-        gl={{ alpha: true, antialias: false, maxPixelRatio: 1 }}>
+        onCreated={({ gl }) => {
+          glContextRef.current = gl.getContext();
+        }}
+        gl={{
+          alpha: true,
+          antialias: false,
+          maxPixelRatio: 1,
+          stencil: false,
+          depth: false,
+        }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

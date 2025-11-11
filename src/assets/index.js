@@ -43,8 +43,12 @@ import spotifyclone from "./project/spotifyclone.png";
 import sb from "./project/sb.png";
 import perfumeproject from "./project/perfume.png";
 import storeproject from "./project/store.png";
+import linkhub87 from "./project/linkhub.png";
+import project2041 from "./project/2041.png";
 
 export {
+  linkhub87,
+  project2041,
   logo1,
   backend,
   creator,
