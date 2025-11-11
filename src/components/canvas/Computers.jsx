@@ -12,7 +12,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -34,6 +34,7 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const glRef = React.useRef(null);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -56,14 +57,30 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    return () => {
+      const gl = glRef.current;
+      if (gl) {
+        try {
+          gl.dispose();
+          gl.forceContextLoss();
+          const ext = gl.getContext().getExtension("WEBGL_lose_context");
+          if (ext && typeof ext.loseContext === "function") ext.loseContext();
+        } catch (e) {
+          console.warn("Error disposing GL context:", e);
+        }
+      }
+    };
+  }, []);
+
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
+      onCreated={({ gl }) => (glRef.current = gl)}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+      gl={{ alpha: true, antialias: true, maxPixelRatio: 1 }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}

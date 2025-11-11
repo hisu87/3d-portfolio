@@ -15,19 +15,37 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const glRef = React.useRef(null);
+
+  React.useEffect(() => {
+    return () => {
+      const gl = glRef.current;
+      if (gl) {
+        try {
+          gl.dispose();
+          gl.forceContextLoss();
+          const ext = gl.getContext().getExtension("WEBGL_lose_context");
+          if (ext && typeof ext.loseContext === "function") ext.loseContext();
+        } catch (e) {
+          console.warn("Error disposing GL context:", e);
+        }
+      }
+    };
+  }, []);
+
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      onCreated={({ gl }) => (glRef.current = gl)}
+      gl={{ alpha: true, antialias: true, maxPixelRatio: 1 }}
       camera={{
         fov: 45,
         near: 0.1,
         far: 200,
         position: [-4, 3, 6],
-      }}
-    >
+      }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate

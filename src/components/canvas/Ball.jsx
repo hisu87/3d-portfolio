@@ -23,7 +23,7 @@ const Ball = (props) => {
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          color="#fff8eb"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -41,12 +41,30 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const glRef = React.useRef(null);
+
+  React.useEffect(() => {
+    return () => {
+      const gl = glRef.current;
+      if (gl) {
+        try {
+          gl.dispose();
+          gl.forceContextLoss();
+          const ext = gl.getContext().getExtension("WEBGL_lose_context");
+          if (ext && typeof ext.loseContext === "function") ext.loseContext();
+        } catch (e) {
+          console.warn("Error disposing GL context:", e);
+        }
+      }
+    };
+  }, []);
+
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+      onCreated={({ gl }) => (glRef.current = gl)}
+      gl={{ alpha: true, antialias: true, maxPixelRatio: 1 }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
