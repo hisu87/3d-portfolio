@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-
-import logo from "./logo.svg";
+// General assets
 import logo1 from "./logo1.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -46,7 +45,6 @@ import perfumeproject from "./project/perfume.png";
 import storeproject from "./project/store.png";
 
 export {
-  logo,
   logo1,
   backend,
   creator,
