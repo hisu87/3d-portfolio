@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../style";
 import { navLinks } from "../constans";
-import { logo, logo1, menu, close } from "../assets";
+import { logo1, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");

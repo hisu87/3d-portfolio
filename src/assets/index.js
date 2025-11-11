@@ -1,15 +1,14 @@
 /* eslint-disable no-unused-vars */
-
-import logo from "./logo.svg";
+// General assets
 import logo1 from "./logo1.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
+import githubLogo from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
+// Tech logos
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -23,7 +22,13 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
+import azure from "./tech/azure.png";
+import firebase from "./tech/firebase.png";
+import githubcopilot from "./tech/githubcopilot.png";
+import nextjs from "./tech/nextjs.png";
+import github from "./tech/github.png";
+import java from "./company/java.png";
+// Company logos
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -31,25 +36,20 @@ import tesla from "./company/tesla.png";
 import springboot from "./company/springboot.png";
 import webdev from "./company/webdev.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import spotify from "./spotifyclone.png";
-import java from "./fresherjava.png";
-import portfolio from "./3dportfolio.png";
-import perfume from "./perfume.png";
-import stabuckclone from "./sb.png";
-import store from "./store.png";
-
+//Project images
+import portfolio from "./project/3dportfolio.png";
+import fresherjava from "./project/fresherjava.png";
+import spotifyclone from "./project/spotifyclone.png";
+import sb from "./project/sb.png";
+import perfumeproject from "./project/perfume.png";
+import storeproject from "./project/store.png";
 
 export {
-  logo,
   logo1,
   backend,
   creator,
   mobile,
   web,
-  github,
   menu,
   close,
   css,
@@ -69,15 +69,19 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   springboot,
   webdev,
-  spotify,
+  spotifyclone,
+  fresherjava,
   java,
   portfolio,
-  perfume,
-  stabuckclone,
-  store,
+  perfumeproject,
+  sb,
+  storeproject,
+  azure,
+  firebase,
+  githubcopilot,
+  nextjs,
+  github,
+  githubLogo,
 };

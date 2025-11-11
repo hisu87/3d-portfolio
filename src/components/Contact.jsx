@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../style";
 import { EarthCanvas } from "./canvas";
@@ -30,39 +29,50 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    // Build mailto URL for default mail client (Outlook, Mail, etc.)
+    const to = "hisu0807@outlook.com";
+    const subject = form.name
+      ? `${form.name} - Contact from portfolio`
+      : "Contact from portfolio";
+    const bodyLines = [];
+    if (form.message) bodyLines.push(form.message);
+    bodyLines.push("\n---\n");
+    bodyLines.push(`From: ${form.name || "(not provided)"}`);
+    if (form.email) bodyLines.push(`Reply-To: ${form.email}`);
 
-    emailjs
-      .send(
-        "service_dvst1fe",
-        "template_a67uqwt",
-        {
-          from_name: form.name,
-          to_name: "Hisu",
-          from_email: form.email,
-          to_email: "hisu0807outlook.com",
-          message: form.message,
-        },
-        "Q3Y5oCrKZPKK1H6CR"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+    const body = encodeURIComponent(bodyLines.join("\n"));
+    const mailtoUrl = `mailto:${encodeURIComponent(
+      to
+    )}?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+    // Gmail web compose URL (opens in a new tab)
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      to
+    )}&su=${encodeURIComponent(subject)}&body=${body}`;
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
+    // Ask user preference: Gmail (web) or default mail app
+    try {
+      const useGmail = window.confirm(
+        "Open compose in Gmail web? Click OK for Gmail, Cancel to open your default mail app (Outlook/Desktop)."
       );
+      if (useGmail) {
+        window.open(gmailUrl, "_blank");
+      } else {
+        // Using location.href will open the user's default mail client
+        window.location.href = mailtoUrl;
+      }
+
+      // Reset form UI state
+      setLoading(false);
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Could not open mail client", err);
+      setLoading(false);
+      alert(
+        "Could not open mail client. Please copy your message and send manually to " +
+          to
+      );
+    }
   };
 
   return (

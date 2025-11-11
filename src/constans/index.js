@@ -14,27 +14,27 @@ import {
   nodejs,
   mongodb,
   git,
+  java,
+  github,
   figma,
   docker,
+  azure,
+  githubcopilot,
+  nextjs,
+  firebase,
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   springboot,
   webdev,
-  spotify,
-  java,
+  spotifyclone,
+  fresherjava,
   portfolio,
-  perfume,
-  store,
-  stabuckclone,
-  azure,
-  githubcopilot,
-  nextjs,
+  perfumeproject,
+  storeproject,
+  sb,
 } from "../assets";
 
 export const navLinks = [
@@ -54,11 +54,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Java Developer",
+    title: "Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "DevOps Engineer",
     icon: mobile,
   },
   {
@@ -66,7 +66,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Database",
+    title: "Data Analyst",
     icon: creator,
   },
 ];
@@ -132,6 +132,10 @@ const technologies = [
   {
     name: "Git",
     icon: git,
+  },
+  {
+    name: "GitHub",
+    icon: github,
   },
   {
     name: "Figma",
@@ -240,8 +244,29 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: "your_image_variable_for_linkhub87", // Cần thay thế bằng biến hình ảnh của bạn
+    image: "", // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/linkhub87",
+  },
+  {
+    name: "3D Portfolio",
+    description:
+      "A 3D portfolio website that showcases my skills and projects using Three.js and React.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/hisu87/3d-portfolio.git",
   },
   {
     name: "Ecommerce Fragnant Store",
@@ -265,7 +290,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: "your_image_variable_for_webtmdt", // Cần thay thế bằng biến hình ảnh của bạn
+    image: "perfumeproject", // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/webTMDT",
   },
   {
@@ -306,7 +331,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "your_image_variable_for_spotify", // Cần thay thế bằng biến hình ảnh của bạn
+    image: "spotifyclone", // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/spotify-clone",
   },
   {
@@ -327,7 +352,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: "your_image_variable_for_starbucks", // Cần thay thế bằng biến hình ảnh của bạn
+    image: "sb", // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/Web-Starbuck-Clone-Remake",
   },
   {
@@ -352,135 +377,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: "your_image_variable_for_sof306", // Cần thay thế bằng biến hình ảnh của bạn
-    source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
-  },
-
-  {
-    name: "3D Portfolio",
-    description:
-      "A 3D portfolio website that showcases my skills and projects using Three.js and React.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "threejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: portfolio,
-    source_code_link: "https://github.com/hisu87/3d-portfolio.git",
-  },
-  {
-    name: "Spotify Clone",
-    description:
-      "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data, and stripe for subsciption.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "stripe",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: spotify,
-    source_code_link: "https://github.com/hisu87/spotify-clone.git",
-  },
-  {
-    name: "Java",
-    description:
-      "A Simpkle Student Management System using Java can read and write data to file.",
-    tags: [
-      {
-        name: "java",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: java,
-    source_code_link:
-      "https://github.com/hisu87/PS33100-PhamVanHieu-Assignment-Java2",
-  },
-  {
-    name: "Ecommerce Fragnant Store",
-    description:
-      "An ecommerce website for selling fragnant with admin page to management product, revenuew, employee.",
-    tags: [
-      {
-        name: "JSP",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Servlet",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Java",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "MS SQL Server",
-        color: "yellow-text-gradient",
-      },
-    ],
-    image: perfume,
-    source_code_link: "https://github.com/hisu87/webTMDT",
-  },
-  {
-    name: "Ecommerce Store",
-    description:
-      "An ecommerce website for selling fragnant with admin page to management product, revenuew, employee",
-    tags: [
-      {
-        name: "Spring Boot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Thymeleaf",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "MS SQL Server",
-        color: "yellow-text-gradient",
-      },
-    ],
-    image: store,
-    source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
-  },
-  {
-    name: "Starbucks Clone Remake",
-    description:
-      "A Starbucks clone with different UI/UX and more creative. By using HTML, CSS and JavaScript. For a new experience.",
-    tags: [
-      {
-        name: "HTML",
-        color: "green-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: stabuckclone,
+    image: "storeproject", // Cần thay thế bằng biến hình ảnh của bạn
     source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
   },
 ];
