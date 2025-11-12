@@ -35,10 +35,11 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import springboot from "./company/springboot.png";
 import webdev from "./company/webdev.png";
+import fpt from "./company/fpt.png";
+import mvc from "./company/mvc.png";
 
 //Project images
 import portfolio from "./project/3dportfolio.png";
-import fresherjava from "./project/fresherjava.png";
 import spotifyclone from "./project/spotifyclone.png";
 import sb from "./project/sb.png";
 import perfumeproject from "./project/perfume.png";
@@ -76,7 +77,6 @@ export {
   springboot,
   webdev,
   spotifyclone,
-  fresherjava,
   java,
   portfolio,
   perfumeproject,
@@ -88,4 +88,6 @@ export {
   nextjs,
   github,
   githubLogo,
+  fpt,
+  mvc,
 };
