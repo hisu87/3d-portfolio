@@ -30,14 +30,11 @@ import {
   springboot,
   webdev,
   spotifyclone,
+  fresherjava,
   portfolio,
   perfumeproject,
   storeproject,
   sb,
-  linkhub87,
-  project2041,
-  fpt,
-  mvc,
 } from "../assets";
 
 export const navLinks = [
@@ -147,7 +144,7 @@ const technologies = [
 const experiences = [
   {
     title: "Software Development With Java",
-    company_name: "Studying at FPT Polytechnic",
+    company_name: "Studying at FPT PolyTechic",
     icon: springboot,
     iconBg: "#383E56",
     date: "From August 2022",
@@ -169,73 +166,6 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Software Development With Java",
-    company_name: "Studying at FPT Polytechnic",
-    icon: springboot, // Thay thế bằng biến icon Spring Boot/Java của bạn
-    iconBg: "#383E56",
-    date: "From August 2022", // Giữ ngày tháng từ ví dụ của bạn
-    points: [
-      "Xây dựng hệ thống Quản lý Sinh viên bằng Java core, bao gồm đọc và ghi dữ liệu từ tệp.",
-      "Phát triển website thương mại điện tử (Ecommerce Fragnant Store) sử dụng JSP, Servlet, Java và MS SQL Server.",
-      "Tạo một trang web thương mại điện tử khác (Ecommerce Store) với Spring Boot, Thymeleaf và MS SQL Server.",
-      "Hoàn thành dự án mẫu (SOF2041) bằng Java, củng cố kỹ năng lập trình và làm việc nhóm.",
-    ],
-  },
-  {
-    title: "Admin Part-time",
-    company_name: "MVC NETWORK",
-    icon: mvc,
-    iconBg: "#E6DEDD",
-    date: "Nov 2023 - June 2025",
-    points: [
-      "Managed administrative tasks and supported daily operations.",
-      "Coordinated communication between departments to ensure smooth workflow.",
-      "Maintained accurate records and handled confidential information with discretion.",
-      "Handled customer inquiries and provided excellent service.",
-    ],
-  },
-  {
-    title: "Full-Stack Web Development",
-    company_name: "Personal Projects",
-    icon: nextjs, // Thay thế bằng biến icon React/Next.js của bạn
-    iconBg: "#E6DEDD",
-    date: "2023 - Present",
-    points: [
-      "Phát triển 'LinkHub87', một nền tảng quản lý liên kết hiệu suất cao sử dụng Next.js, React, Firebase và Tailwind CSS.",
-      "Xây dựng 'Spotify Clone' với React, tích hợp Supabase cho cơ sở dữ liệu và Stripe cho hệ thống thanh toán.",
-      "Tạo một portfolio 3D tương tác bằng React, Three.js và Tailwind để giới thiệu các dự án.",
-      "Thiết kế 'Starbucks Clone Remake' sử dụng HTML, CSS và JavaScript để thể hiện kỹ năng UI/UX.",
-    ],
-  },
-  {
-    title: " Graduate",
-    company_name: "FPT Polytechnic",
-    icon: fpt,
-    iconBg: "#E6DEDD",
-    date: "February 2025",
-    points: [
-      "Diploma - Major: Software Development",
-      "GPA: 3.55/4.0",
-      "Graduation Rank: Excellent",
-      "Participated in technical workshops and hackathons to sharpen programming and analytical abilities.",
-      "Effectively balanced studies with active participation in social and extracurricular activities.",
-      "Engaged in social work and volunteer initiatives, including organizing charity events, community support programs, and student mentoring.",
-    ],
-  },
-  {
-    title: "Admin System",
-    company_name: "MVC NETWORK",
-    icon: mvc,
-    iconBg: "#E6DEDD",
-    date: "July 2025 - Present",
-    points: [
-      "Manege and makesure the system works well, support take care part-time employees.",
-      "Collaborate with other teams to handle and resolve customer issues.",
-      "Optimize administrative processes to improve efficiency and accuracy.",
-      "Generate reports and analyze data to support decision-making processes.",
     ],
   },
 ];
@@ -271,7 +201,7 @@ const projects = [
   {
     name: "LinkHub87",
     description:
-      "Một nền tảng quản lý liên kết hiện đại, hiệu suất cao với phân tích nâng cao, theo dõi thời gian thực và bộ đệm thông minh.",
+      "A modern link management platform with high performance, advanced analytics, real-time tracking and smart caching to organize and analyze your links efficiently.",
     tags: [
       {
         name: "next.js",
@@ -294,7 +224,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: linkhub87,
+    image: portfolio,
     source_code_link: "https://github.com/hisu87/linkhub87",
   },
   {
@@ -343,41 +273,48 @@ const projects = [
     image: perfumeproject,
     source_code_link: "https://github.com/hisu87/webTMDT",
   },
-
+  // {
+  //   name: "Project1",
+  //   description:
+  //     "A sample project that needs further development and documentation updates.",
+  //   tags: [],
+  //   image: null,
+  //   source_code_link: "https://github.com/hisu87/Project1",
+  // },
   {
     name: "SOF2041",
     description:
-      " Đây là một dự án ứng dụng desktop được xây dựng bằng Java Swing, SQL Server, thể hiện các kỹ năng và kiến thức cốt lõi của môn học.",
+      "A semester project (SOF2041) built in September 2023 demonstrating Java programming concepts and software development practices.",
     tags: [
       {
         name: "java",
         color: "blue-text-gradient",
       },
     ],
-    image: project2041, // Cần thay thế bằng biến hình ảnh của bạn
+    image: fresherjava,
     source_code_link: "https://github.com/hisu87/SOF2041",
   },
-  // {
-  //   name: "Spotify Clone",
-  //   description:
-  //     "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data, and stripe for subsciption.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "stripe",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: spotifyclone,
-  //   source_code_link: "https://github.com/hisu87/spotify-clone",
-  // },
+  {
+    name: "Spotify Clone",
+    description:
+      "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data, and stripe for subsciption.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spotifyclone,
+    source_code_link: "https://github.com/hisu87/spotify-clone",
+  },
   {
     name: "Starbucks Clone Remake",
     description:
@@ -402,7 +339,7 @@ const projects = [
   {
     name: "Ecommerce Store",
     description:
-      "An ecommerce website for selling fragnant with admin page to management product, revenuew, employee",
+      "An e-commerce website for selling fragrances with an admin page to manage products, revenue, and employees.",
     tags: [
       {
         name: "Spring Boot",
@@ -421,7 +358,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: storeproject, // Cần thay thế bằng biến hình ảnh của bạn
+    image: storeproject,
     source_code_link: "https://github.com/hisu87/SOF306-Java6-ASM",
   },
 ];
