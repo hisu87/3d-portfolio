@@ -18,7 +18,7 @@ const Stars = (props) => {
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group rotation={[0, 0, Math.PI / 4]} dispose={null}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
@@ -64,6 +64,7 @@ const StarsCanvas = () => {
           maxPixelRatio: 1,
           stencil: false,
           depth: false,
+          preserveDrawingBuffer: true,
         }}>
         <Suspense fallback={null}>
           <Stars />

@@ -37,6 +37,7 @@ import {
   sb,
   linkhub87,
   fpt,
+  mvc,
 } from "../assets";
 
 export const overview =
@@ -164,11 +165,11 @@ const technologies = [
   },
   {
     name: "GCP",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    icon: docker, // Placeholder local icon to avoid CORS WebGL issues
   },
   {
     name: "Vercel",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+    icon: reactjs, // Placeholder local icon to avoid CORS WebGL issues
   },
   {
     name: "Solana",
@@ -177,6 +178,29 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "System Admin",
+    company_name: "MVC",
+    icon: mvc,
+    iconBg: "#383E56",
+    date: "June 2025 - June 2026",
+    points: [
+      "Quản trị và tối ưu hóa hệ thống vận hành nội bộ.",
+      "Quản lý máy chủ và khắc phục sự cố hệ thống.",
+      "Xây dựng nền tảng tư duy Backend và System Architecture.",
+    ],
+  },
+  {
+    title: "Admin Part-time",
+    company_name: "MVC",
+    icon: mvc,
+    iconBg: "#E6DEDD",
+    date: "2023 - June 2025",
+    points: [
+      "Hỗ trợ kỹ thuật nền tảng cho người dùng và nội bộ.",
+      "Quản lý dữ liệu hệ thống cơ bản.",
+    ],
+  },
   {
     title: "Back-end Developer Intern",
     company_name: "FPT Practice Workshop & Superteam HCM",
@@ -245,6 +269,44 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "LunchMate AI",
+    description:
+      "A software application built with Next.js, TypeScript, and Firebase integrating AI to provide smart lunch recommendations and manage user preferences.",
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "AI",
+        color: "green-text-gradient",
+      },
+    ],
+    image: webdev,
+    source_code_link: "https://github.com/hisu87/lunchmate-ai",
+  },
+  {
+    name: "BioLink HUB",
+    description:
+      "A high-performance link management web platform featuring user and admin dashboards built using Firebase Cloud Firestore.",
+    tags: [
+      {
+        name: "firebase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: web,
+    source_code_link: "https://github.com/hisu87/biolink-hub",
+  },
   {
     name: "LinkHub87",
     description:

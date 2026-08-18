@@ -10,7 +10,7 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf", "https://www.gstatic.com/draco/v1/decoders/");
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} dispose={null} />
   );
 };
 
@@ -44,6 +44,7 @@ const EarthCanvas = () => {
         antialias: true,
         maxPixelRatio: 1,
         stencil: false,
+        preserveDrawingBuffer: true,
       }}
       camera={{
         fov: 45,
