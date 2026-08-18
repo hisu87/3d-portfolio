@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { LanguageProvider } from "./context/LanguageContext";
 
 import {
   About,
@@ -13,24 +14,26 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-top absolute inset-0 h-screen pointer-events-none"></div>
-        <div className="relative z-10">
-          <Navbar />
-          <Hero />
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          {/* <Feedbacks /> */}
-          <div className="relative z-0">
-            <Contact />
-            <StarsCanvas />
+    <LanguageProvider>
+      <BrowserRouter>
+        <div className="relative z-0 bg-primary">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-top absolute inset-0 h-screen pointer-events-none"></div>
+          <div className="relative z-10">
+            <Navbar />
+            <Hero />
+            <About />
+            <Experience />
+            <Tech />
+            <Works />
+            {/* <Feedbacks /> */}
+            <div className="relative z-0">
+              <Contact />
+              <StarsCanvas />
+            </div>
           </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 };
 

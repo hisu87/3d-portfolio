@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../style";
 import { navLinks } from "../constans";
+import { useLanguage } from "../context/LanguageContext";
 import { logo1, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const currentNavLinks = navLinks[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +52,7 @@ const Navbar = () => {
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
+          {currentNavLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
@@ -59,6 +62,21 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li className="flex gap-2 text-white font-bold text-[18px] ml-4">
+            <button 
+              onClick={() => setLanguage('vi')} 
+              className={language === 'vi' ? 'text-white' : 'text-secondary'}
+            >
+              VI
+            </button>
+            <span className="text-secondary">|</span>
+            <button 
+              onClick={() => setLanguage('en')} 
+              className={language === 'en' ? 'text-white' : 'text-secondary'}
+            >
+              EN
+            </button>
+          </li>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -74,7 +92,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
+              {currentNavLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
@@ -87,6 +105,21 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li className="flex gap-2 font-poppins font-medium cursor-pointer text-[16px] mt-2">
+                <button 
+                  onClick={() => { setLanguage('vi'); setToggle(!toggle); }} 
+                  className={language === 'vi' ? 'text-white' : 'text-secondary'}
+                >
+                  VI
+                </button>
+                <span className="text-secondary">|</span>
+                <button 
+                  onClick={() => { setLanguage('en'); setToggle(!toggle); }} 
+                  className={language === 'en' ? 'text-white' : 'text-secondary'}
+                >
+                  EN
+                </button>
+              </li>
             </ul>
           </div>
         </div>

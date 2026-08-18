@@ -13,6 +13,7 @@ import { styles } from "../style";
 import { experiences } from "../constans";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -63,20 +64,21 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { t, language } = useLanguage();
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          {t("experience.subtitle")}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          {t("experience.title")}.
         </h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {experiences[language].map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

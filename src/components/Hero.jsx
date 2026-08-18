@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -19,10 +21,10 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#f2657d]">Pham Van Hieu</span>
+            {t("hero.title")} <span className="text-[#f2657d]">{t("hero.name")}</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Performance-focused Full-stack Developer
+            {t("hero.subtitle")}
           </p>
         </motion.div>
       </div>

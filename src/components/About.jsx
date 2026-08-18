@@ -11,6 +11,7 @@ import { styles } from "../style";
 import { services, overview, certifications } from "../constans";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -39,32 +40,33 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const { t, language } = useLanguage();
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>{t("about.subtitle")}</p>
+        <h2 className={styles.sectionHeadText}>{t("about.title")}.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        {overview}
+        {overview[language]}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
+        {services[language].map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
 
       <div className="mt-20">
         <motion.div variants={textVariant()}>
-          <h2 className={styles.sectionHeadText}>Certifications.</h2>
+          <h2 className={styles.sectionHeadText}>{t("about.certifications")}.</h2>
         </motion.div>
         
         <div className="mt-10 flex flex-col gap-5">
-          {certifications.map((cert, index) => (
+          {certifications[language].map((cert, index) => (
             <motion.div
               key={index}
               variants={fadeIn("up", "spring", index * 0.5, 0.75)}
