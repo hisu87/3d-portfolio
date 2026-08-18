@@ -34,6 +34,7 @@ import {
   perfumeproject,
   storeproject,
   sb,
+  lunchmate,
   linkhub87,
   fpt,
   mvc,
@@ -226,8 +227,8 @@ export const projects = {
         { name: "firebase", color: "orange-text-gradient" },
         { name: "AI", color: "green-text-gradient" },
       ],
-      image: webdev,
-      source_code_link: "https://github.com/hisu87/lunchmate-ai",
+      image: lunchmate,
+      source_code_link: "https://lunchmate-six.vercel.app/login",
     },
     {
       name: "LinkHub87",
@@ -239,7 +240,7 @@ export const projects = {
         { name: "Vercel", color: "green-text-gradient" },
       ],
       image: linkhub87,
-      source_code_link: "https://github.com/hisu87/linkhub87",
+      source_code_link: "https://linkhub87.vercel.app/",
     },
     {
       name: "3D Portfolio",
@@ -251,7 +252,7 @@ export const projects = {
         { name: "tailwind", color: "pink-text-gradient" },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/hisu87/3d-portfolio.git",
+      source_code_link: "https://3d-portfolio-hisu87s-projects.vercel.app/",
     },
     {
       name: "Ecommerce Fragnant Store",
@@ -266,18 +267,18 @@ export const projects = {
       image: perfumeproject,
       source_code_link: "https://github.com/hisu87/webTMDT",
     },
-    {
-      name: "Spotify Clone",
-      description:
-        "Bản sao Spotify cho phép tìm kiếm bài hát, tạo danh sách phát, nghe nhạc, tải nhạc và ảnh sử dụng Supabase và Stripe.",
-      tags: [
-        { name: "react", color: "blue-text-gradient" },
-        { name: "supabase", color: "green-text-gradient" },
-        { name: "stripe", color: "pink-text-gradient" },
-      ],
-      image: spotifyclone,
-      source_code_link: "https://github.com/hisu87/spotify-clone",
-    },
+    // {
+    //   name: "Spotify Clone",
+    //   description:
+    //     "Bản sao Spotify cho phép tìm kiếm bài hát, tạo danh sách phát, nghe nhạc, tải nhạc và ảnh sử dụng Supabase và Stripe.",
+    //   tags: [
+    //     { name: "react", color: "blue-text-gradient" },
+    //     { name: "supabase", color: "green-text-gradient" },
+    //     { name: "stripe", color: "pink-text-gradient" },
+    //   ],
+    //   image: spotifyclone,
+    //   source_code_link: "https://github.com/hisu87/spotify-clone",
+    // },
     {
       name: "Coffee Shop Management",
       description:
@@ -341,18 +342,18 @@ export const projects = {
       image: perfumeproject,
       source_code_link: "https://github.com/hisu87/webTMDT",
     },
-    {
-      name: "Spotify Clone",
-      description:
-        "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data.",
-      tags: [
-        { name: "react", color: "blue-text-gradient" },
-        { name: "supabase", color: "green-text-gradient" },
-        { name: "stripe", color: "pink-text-gradient" },
-      ],
-      image: spotifyclone,
-      source_code_link: "https://github.com/hisu87/spotify-clone",
-    },
+    // {
+    //   name: "Spotify Clone",
+    //   description:
+    //     "A Spotify clone that allows users to search for songs, create playlists, and play music, upload songs and img using supabase for data.",
+    //   tags: [
+    //     { name: "react", color: "blue-text-gradient" },
+    //     { name: "supabase", color: "green-text-gradient" },
+    //     { name: "stripe", color: "pink-text-gradient" },
+    //   ],
+    //   image: spotifyclone,
+    //   source_code_link: "https://github.com/hisu87/spotify-clone",
+    // },
     {
       name: "Coffee Shop Management",
       description:

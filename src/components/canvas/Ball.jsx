@@ -12,9 +12,49 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import * as THREE from "three";
+
+const textureCache = new Map();
+
+function useRobustTexture(url) {
+  if (textureCache.has(url)) {
+    const resource = textureCache.get(url);
+    if (resource.status === "resolved") return resource.texture;
+    if (resource.status === "rejected") throw resource.error;
+    if (resource.status === "pending") throw resource.promise;
+  }
+
+  const promise = new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      // Use 1024x1024 for high quality and power-of-two size
+      canvas.width = 1024;
+      canvas.height = 1024;
+      const ctx = canvas.getContext("2d");
+      
+      // Draw image onto canvas, stretching to fill
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      
+      const texture = new THREE.CanvasTexture(canvas);
+      texture.anisotropy = 16;
+      textureCache.set(url, { status: "resolved", texture });
+      resolve(texture);
+    };
+    img.onerror = (e) => {
+      textureCache.set(url, { status: "rejected", error: e });
+      reject(e);
+    };
+    img.src = url;
+  });
+
+  textureCache.set(url, { status: "pending", promise });
+  throw promise;
+}
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+  const decal = useRobustTexture(props.imgUrl);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>

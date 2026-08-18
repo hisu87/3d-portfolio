@@ -48,6 +48,7 @@ import perfumeproject from "./project/perfume.png";
 import storeproject from "./project/store.png";
 import linkhub87 from "./project/linkhub.png";
 import project2041 from "./project/2041.png";
+import lunchmate from "./project/lunchmate.png";
 
 export {
   linkhub87,
@@ -84,6 +85,7 @@ export {
   perfumeproject,
   sb,
   storeproject,
+  lunchmate,
   azure,
   firebase,
   githubcopilot,
