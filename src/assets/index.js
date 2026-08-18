@@ -17,16 +17,18 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
+import reactjs from "./tech/reactjs.svg";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.png";
+import threejs from "./tech/threejs2.svg";
 import azure from "./tech/azure.png";
 import firebase from "./tech/firebase.png";
 import githubcopilot from "./tech/githubcopilot.png";
 import nextjs from "./tech/nextjs.png";
 import github from "./tech/github.png";
+import postgresql from "./tech/postgresql.svg";
+import digitalocean from "./tech/digitalocean.svg";
 import java from "./company/java.png";
 // Company logos
 import meta from "./company/meta.png";
@@ -87,6 +89,8 @@ export {
   githubcopilot,
   nextjs,
   github,
+  postgresql,
+  digitalocean,
   githubLogo,
   fpt,
   mvc,
