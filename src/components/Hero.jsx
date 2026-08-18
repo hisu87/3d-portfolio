@@ -13,16 +13,18 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, Im <span className="text-[#f2657d]">Hisu</span>
+            Hi, I'm <span className="text-[#f2657d]">Pham Van Hieu</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            🔭 I’m working as a Software Engineer and contributing to frontend
-            and backend for building web applications.
-            <br className="sm:block hidden" />
+            Performance-focused Full-stack Developer
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <ComputersCanvas />

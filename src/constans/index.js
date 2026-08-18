@@ -39,6 +39,27 @@ import {
   fpt,
 } from "../assets";
 
+export const overview =
+  "I am a performance-focused Full-stack Developer with a strong foundation in Java (Spring Boot) and JavaScript (Next.js). I specialize in building high-performance, scalable applications and integrating complex systems. My passion lies in optimizing system architecture, writing clean code, and leveraging modern technologies to deliver robust, user-centric software products.";
+
+export const certifications = [
+  {
+    name: "Clean Code",
+    organization: "Udemy",
+    date: "May 2024",
+  },
+  {
+    name: "Business Model Innovation",
+    organization: "Udemy",
+    date: "May 2024",
+  },
+  {
+    name: "The Complete Business Plan Course",
+    organization: "Udemy",
+    date: "May 2024",
+  },
+];
+
 export const navLinks = [
   {
     id: "about",

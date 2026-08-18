@@ -8,7 +8,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../style";
-import { services } from "../constans";
+import { services, overview, certifications } from "../constans";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -49,17 +49,35 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I'm a Software Developer from VietNam. All my skills are focused on
-        building efficient and scalable web applications. I am passionate about
-        learning new technologies and continuously improving my skills. I enjoy
-        collaborating with others to create innovative solutions that make a
-        positive impact. Let's work together to bring your ideas to life!
+        {overview}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
+      </div>
+
+      <div className="mt-20">
+        <motion.div variants={textVariant()}>
+          <h2 className={styles.sectionHeadText}>Certifications.</h2>
+        </motion.div>
+        
+        <div className="mt-10 flex flex-col gap-5">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+              className="bg-tertiary/40 backdrop-blur-md border border-white/10 shadow-xl p-5 rounded-2xl flex justify-between items-center sm:flex-row flex-col gap-4"
+            >
+              <div>
+                <h3 className="text-white text-[18px] font-bold">{cert.name}</h3>
+                <p className="text-secondary text-[14px]">{cert.organization}</p>
+              </div>
+              <p className="text-[#f2657d] font-semibold text-[14px] whitespace-nowrap">{cert.date}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </>
   );
