@@ -77,20 +77,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-stack Developer",
     icon: web,
-  },
-  {
-    title: "DevOps Engineer",
-    icon: mobile,
   },
   {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Data Analyst",
+    title: "Web Developer",
     icon: creator,
+  },
+  {
+    title: "Performance Optimizer",
+    icon: mobile,
   },
 ];
 
@@ -172,7 +172,7 @@ const technologies = [
   },
   {
     name: "Solana",
-    icon: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
+    icon: javascript, // Placeholder local icon to avoid CORS WebGL issues
   },
 ];
 
@@ -182,7 +182,7 @@ const experiences = [
     company_name: "FPT Practice Workshop & Superteam HCM",
     icon: fpt,
     iconBg: "#383E56",
-    date: "Recent",
+    date: "June 2023 - August 2023",
     points: [
       "Nghiên cứu và phát triển hệ thống với Solana blockchain.",
       "Tối ưu hóa hiệu năng, tăng tốc độ 10%.",
@@ -384,21 +384,42 @@ const projects = [
     source_code_link: "https://github.com/hisu87/Web-Starbuck-Clone-Remake",
   },
   {
+    name: "Coffee Shop Management",
+    description:
+      "A desktop application for coffee shop management. Emphasized Java DAO pattern, Java Swing UI, and MS SQL Server database. Lãnh đạo nhóm 6 thành viên.",
+    tags: [
+      {
+        name: "Java Swing",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Java DAO",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MS SQL Server",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: java,
+    source_code_link: "https://github.com/hisu87/coffee-shop-management",
+  },
+  {
     name: "Ecommerce Store",
     description:
-      "An e-commerce website for selling fragrances with an admin page to manage products, revenue, and employees.",
+      "An e-commerce website for selling fragrances utilizing MVC Architecture, JSP, and Firebase API, with an admin page to manage products, revenue, and employees.",
     tags: [
       {
         name: "Spring Boot",
         color: "green-text-gradient",
       },
       {
-        name: "Thymeleaf",
+        name: "JSP",
         color: "blue-text-gradient",
       },
       {
-        name: "JavaScript",
-        color: "orange-text-gradient",
+        name: "Firebase API",
+        color: "pink-text-gradient",
       },
       {
         name: "MS SQL Server",
