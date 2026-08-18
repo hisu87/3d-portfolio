@@ -8,7 +8,7 @@ import CanvasLoader from "../Loader";
 
 // eslint-disable-next-line react/prop-types
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("./desktop_pc/scene.gltf", "https://www.gstatic.com/draco/v1/decoders/");
 
   return (
     <mesh>

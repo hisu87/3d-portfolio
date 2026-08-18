@@ -30,11 +30,13 @@ import {
   springboot,
   webdev,
   spotifyclone,
-  fresherjava,
+  project2041,
   portfolio,
   perfumeproject,
   storeproject,
   sb,
+  linkhub87,
+  fpt,
 } from "../assets";
 
 export const navLinks = [
@@ -91,7 +93,7 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Next.js",
+    name: "Next.js 15",
     icon: nextjs,
   },
 
@@ -130,7 +132,7 @@ const technologies = [
     icon: githubcopilot,
   },
 
-  // Cloud
+  // Cloud & Others
   {
     name: "Azure",
     icon: azure,
@@ -139,9 +141,33 @@ const technologies = [
     name: "Firebase",
     icon: firebase,
   },
+  {
+    name: "GCP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+  },
+  {
+    name: "Vercel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+  },
+  {
+    name: "Solana",
+    icon: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
+  },
 ];
 
 const experiences = [
+  {
+    title: "Back-end Developer Intern",
+    company_name: "FPT Practice Workshop & Superteam HCM",
+    icon: fpt,
+    iconBg: "#383E56",
+    date: "Recent",
+    points: [
+      "Nghiên cứu và phát triển hệ thống với Solana blockchain.",
+      "Tối ưu hóa hiệu năng, tăng tốc độ 10%.",
+      "Ứng dụng AI vào quy trình làm việc, giảm 100 giờ R&D nhờ AI.",
+    ],
+  },
   {
     title: "Software Development With Java",
     company_name: "Studying at FPT PolyTechic",
@@ -201,10 +227,10 @@ const projects = [
   {
     name: "LinkHub87",
     description:
-      "A modern link management platform with high performance, advanced analytics, real-time tracking and smart caching to organize and analyze your links efficiently.",
+      "A modern link management platform. Optimized for performance with Tốc độ tải < 400ms, Cache Hit Rate 92%, and giảm 95% chi phí query.",
     tags: [
       {
-        name: "next.js",
+        name: "next.js 15",
         color: "blue-text-gradient",
       },
       {
@@ -224,7 +250,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: portfolio,
+    image: linkhub87,
     source_code_link: "https://github.com/hisu87/linkhub87",
   },
   {
@@ -291,7 +317,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: fresherjava,
+    image: project2041,
     source_code_link: "https://github.com/hisu87/SOF2041",
   },
   {
