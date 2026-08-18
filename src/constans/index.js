@@ -279,18 +279,18 @@ export const projects = {
     //   image: spotifyclone,
     //   source_code_link: "https://github.com/hisu87/spotify-clone",
     // },
-    {
-      name: "Coffee Shop Management",
-      description:
-        "Ứng dụng desktop quản lý quán cà phê. Nhấn mạnh mẫu Java DAO, giao diện Java Swing và CSDL MS SQL Server. Lãnh đạo nhóm 6 thành viên.",
-      tags: [
-        { name: "Java Swing", color: "blue-text-gradient" },
-        { name: "Java DAO", color: "green-text-gradient" },
-        { name: "MS SQL Server", color: "pink-text-gradient" },
-      ],
-      image: java,
-      source_code_link: "https://github.com/hisu87/coffee-shop-management",
-    },
+    // {
+    //   name: "Coffee Shop Management",
+    //   description:
+    //     "Ứng dụng desktop quản lý quán cà phê. Nhấn mạnh mẫu Java DAO, giao diện Java Swing và CSDL MS SQL Server. Lãnh đạo nhóm 6 thành viên.",
+    //   tags: [
+    //     { name: "Java Swing", color: "blue-text-gradient" },
+    //     { name: "Java DAO", color: "green-text-gradient" },
+    //     { name: "MS SQL Server", color: "pink-text-gradient" },
+    //   ],
+    //   image: java,
+    //   source_code_link: "https://github.com/hisu87/coffee-shop-management",
+    // },
   ],
   en: [
     {
@@ -354,18 +354,18 @@ export const projects = {
     //   image: spotifyclone,
     //   source_code_link: "https://github.com/hisu87/spotify-clone",
     // },
-    {
-      name: "Coffee Shop Management",
-      description:
-        "A desktop application for coffee shop management. Emphasized Java DAO pattern, Java Swing UI, and MS SQL Server database. Led a team of 6.",
-      tags: [
-        { name: "Java Swing", color: "blue-text-gradient" },
-        { name: "Java DAO", color: "green-text-gradient" },
-        { name: "MS SQL Server", color: "pink-text-gradient" },
-      ],
-      image: java,
-      source_code_link: "https://github.com/hisu87/coffee-shop-management",
-    },
+    // {
+    //   name: "Coffee Shop Management",
+    //   description:
+    //     "A desktop application for coffee shop management. Emphasized Java DAO pattern, Java Swing UI, and MS SQL Server database. Led a team of 6.",
+    //   tags: [
+    //     { name: "Java Swing", color: "blue-text-gradient" },
+    //     { name: "Java DAO", color: "green-text-gradient" },
+    //     { name: "MS SQL Server", color: "pink-text-gradient" },
+    //   ],
+    //   image: java,
+    //   source_code_link: "https://github.com/hisu87/coffee-shop-management",
+    // },
   ],
 };
 
